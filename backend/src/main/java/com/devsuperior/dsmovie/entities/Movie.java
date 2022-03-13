@@ -1,11 +1,17 @@
 package com.devsuperior.dsmovie.entities;
 
-import javax.annotation.Generated;
+import java.util.HashSet;
+import java.util.Set;
+
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+
 
 @Entity
 @Table(name = "tb_movie")
@@ -14,6 +20,9 @@ public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @OneToMany(mappedBy = "id.movie")
+    private Set<Score> scores = new HashSet<>();
 
     private String title;
 
@@ -74,5 +83,15 @@ public class Movie {
     public void setImage(String image) {
         this.image = image;
     }
+
+    public Set<Score> getScores() {
+        return scores;
+    }
+
+    public void setScores(Set<Score> scores) {
+        this.scores = scores;
+    }
+
+    
     
 }

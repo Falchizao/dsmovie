@@ -1,7 +1,5 @@
 package com.devsuperior.dsmovie.services;
 
-import java.util.List;
-import java.util.Optional;
 
 import com.devsuperior.dsmovie.dto.MovieDTO;
 import com.devsuperior.dsmovie.entities.Movie;
