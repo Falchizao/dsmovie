@@ -7,7 +7,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Embeddable
-public class ScorePK implements Serializable {
+public class ScorePk implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@ManyToOne
@@ -18,7 +18,7 @@ public class ScorePK implements Serializable {
 	@JoinColumn(name = "user_id")
 	private User user;
 	
-	public ScorePK() {
+	public ScorePk() {
 	}
 
 	public Movie getMovie() {
