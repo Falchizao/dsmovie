@@ -10,34 +10,32 @@ import javax.persistence.Table;
 @Table(name = "tb_user")
 public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String email;
+	
+	public User() {
+	}
 
-    private String email;
-    
-    public User(Long id, String email) {
-        this.id = id;
-        this.email = email;
-    }
+	public User(Long id, String email) {
+		this.id = id;
+		this.email = email;
+	}
 
-    public Long getId() {
-        return id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public User(){
-        
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 }

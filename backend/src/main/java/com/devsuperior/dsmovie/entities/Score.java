@@ -8,37 +8,35 @@ import javax.persistence.Table;
 @Table(name = "tb_score")
 public class Score {
 
-    @EmbeddedId
-    private ScorePk id = new ScorePk();
+	@EmbeddedId
+	private ScorePK id = new ScorePK();
+	
+	private Double value;
+	
+	public Score() {
+	}
+	
+	public void setMovie(Movie movie) {
+		id.setMovie(movie);
+	}
 
-    private Double value;
+	public void setUser(User user) {
+		id.setUser(user);
+	}
+	
+	public ScorePK getId() {
+		return id;
+	}
 
-    public void setMovie(Movie movie){
-        id.setMovie(movie);
-    }
+	public void setId(ScorePK id) {
+		this.id = id;
+	}
 
-    public void setUser(User user){
-        id.setUser(user);
-    }
+	public Double getValue() {
+		return value;
+	}
 
-    public Score(){
-
-    }
-
-    public ScorePk getId() {
-        return id;
-    }
-
-    public void setId(ScorePk id) {
-        this.id = id;
-    }
-
-    public Double getValue() {
-        return value;
-    }
-
-    public void setValue(Double value) {
-        this.value = value;
-    }
-    
+	public void setValue(Double value) {
+		this.value = value;
+	}
 }
