@@ -9,6 +9,11 @@ import javax.persistence.ManyToOne;
 //AQUI TA MAIUSCULOOOOO
 //This shit is uppercase
 //Teste
+
+
+
+
+
 @Embeddable
 public class ScorePK implements Serializable {
 
