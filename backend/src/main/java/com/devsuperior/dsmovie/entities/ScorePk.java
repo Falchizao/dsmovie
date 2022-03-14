@@ -6,11 +6,11 @@ import javax.persistence.Embeddable;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-
+//AQUI TA MAIUSCULOOOOO
 //This shit is uppercase
 @Embeddable
 public class ScorePK implements Serializable {
-	private static final long serialVersionUID = 1L;
+
 
 	@ManyToOne
 	@JoinColumn(name = "movie_id")
