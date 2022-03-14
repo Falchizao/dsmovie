@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Movie } from 'types/movie';
 import { BASE_URL } from 'utils/requests';
+import { validateEmail } from 'utils/validade';
 import './styles.css';
 
 type Props = {
@@ -28,7 +29,10 @@ function FormCard( { movieId } : Props) {
 
         const email = (event.target as any).email.value;
         const score = (event.target as any).score.value;
-
+   
+        if(!validateEmail(email)){
+            return;
+        }
 
         const config: AxiosRequestConfig = {
             baseURL: BASE_URL,
@@ -45,6 +49,8 @@ function FormCard( { movieId } : Props) {
             navigate("/");
         });
     }
+
+
 
     return (
         <div className="dsmovie-form-container">
