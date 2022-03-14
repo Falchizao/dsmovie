@@ -6,6 +6,8 @@ import javax.persistence.Embeddable;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+
+//This shit is uppercase
 @Embeddable
 public class ScorePK implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -36,4 +38,11 @@ public class ScorePK implements Serializable {
 	public void setUser(User user) {
 		this.user = user;
 	}
+
+	public ScorePK(Movie movie, User user) {
+		this.movie = movie;
+		this.user = user;
+	}
+
+	
 }
